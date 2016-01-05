@@ -15,6 +15,11 @@ from django.test.utils import override_settings
 from .models import AccessToken, AccessTokenGettingError, AccessTokenRefreshingError
 from .lock import distributedlock, LockNotAcquiredError
 
+from mock import MagicMock
+
+distributedlock = MagicMock()
+
+
 __all__ = ['NoActiveTokens', 'ApiAbstractBase', 'Singleton']
 
 
